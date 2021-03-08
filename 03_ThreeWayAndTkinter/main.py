@@ -51,6 +51,7 @@ class Game():
             if button_id == 'Blank':
                 continue
             self.game_buttons[button_id].grid(column=i % 4, row=1 + i // 4, columnspan=1, sticky=tk.NSEW)
+            self.game_buttons[button_id]['background'] = '#00bbbb'
 
     def make_move(self, button_id):
         def move_fn():
