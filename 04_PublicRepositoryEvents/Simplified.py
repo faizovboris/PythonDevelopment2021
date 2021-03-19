@@ -7,7 +7,7 @@ def get_geometry(widget_placement_str):
         place, sticky = widget_placement_str.split('/')
     else:
         place = widget_placement_str
-        sticky = 'NWSE'
+        sticky = tk.NSEW
     row_place, col_place = place.split(':')
     def parse_place(elem_place):
         if '+' in elem_place:
@@ -40,7 +40,7 @@ class Application(tk.Frame):
         self.root.rowconfigure(0, weight=1)
         self.root.columnconfigure(0, weight=1)
         super().__init__(self.root)
-        self.grid(sticky="NEWS")
+        self.grid(sticky=tk.NSEW)
         self.createWidgets()
 
     def __getattr__(self, widget_name):
