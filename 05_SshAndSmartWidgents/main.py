@@ -46,8 +46,8 @@ class OvalHolder:
                f"{self.element_dict['color']}"
 
     def check_point(self, point):
-        return ((self.element_dict['x'] - point[0]) / self.element_dict['size_x']) ** 2 + \
-               ((self.element_dict['y'] - point[1]) / self.element_dict['size_y']) ** 2 <= 1
+        return ((self.element_dict['x'] - point[0]) / max(1, self.element_dict['size_x'])) ** 2 + \
+               ((self.element_dict['y'] - point[1]) / max(1, self.element_dict['size_y'])) ** 2 <= 1
 
 
     def canvas_draw_oval(self, canvas):
