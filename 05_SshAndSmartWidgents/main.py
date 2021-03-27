@@ -71,7 +71,7 @@ class GraphEdit:
         self.frame.grid(column=0, row=0, sticky=tk.NSEW)
         self.frame.columnconfigure(0, weight=1)
         self.frame.columnconfigure(1, weight=1)
-        self.frame.rowconfigure(0, weight=5)
+        self.frame.rowconfigure(0, weight=1)
 
         self.text = tk.Text(self.frame)
         self.text.grid(row=0, column=0, sticky=tk.NSEW)
